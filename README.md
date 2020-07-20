@@ -19,6 +19,8 @@ PUBLIC_ADDRESS = os.environ.get('PUBLIC_ADDRESS') if os.environ.get('PUBLIC_ADDR
 PASSWORD = os.environ.get('BOT_MANAGER_WEB_PASSWORD') if os.environ.get('BOT_MANAGER_WEB_PASSWORD') else '987654321'
 ```
 
+PS: 至于为啥要用os.environ，因为习惯性扔进容器里所以需要环境变量赋值┓( ´∀` )┏
+
 ## 使用
 
 访问`https://bcr.yourdomain.com/manage`
@@ -30,3 +32,11 @@ PASSWORD = os.environ.get('BOT_MANAGER_WEB_PASSWORD') if os.environ.get('BOT_MAN
 PS: 注销按钮我也不知道为啥要存在，想了想也没啥意义就没做了。
 
 PPS: 还有部分垃圾文件懒得看了，体积也不算太过夸张懒得抽了，有人有空可以抽一抽。
+
+## 图示
+
+![图1](Thumbnail/1.png)
+![图2](Thumbnail/2.png)
+![图3](Thumbnail/3.png)
+![图4](Thumbnail/4.png)
+![图5](Thumbnail/5.png)
