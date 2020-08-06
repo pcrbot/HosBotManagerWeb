@@ -4,11 +4,13 @@
 
 ## 安装
 
-前略装好hoshinobot
+1. 前略装好hoshinobot。
 
-整个`bot_manager_web`目录塞进`hoshino/modules`目录下面
+2. 整个`bot_manager_web`目录塞进`hoshino/modules`目录下面。
 
-在`hoshino/config`目录下塞个叫`bot_manager_web.py`的文件，里面写下面这些变量，让模块可以正常被使用。
+3. 在`hoshino/config/__bot__.py`文件中添加模块引用。MODULES_ON 这个字典中添加一行`'bot_manager_web'`。
+
+4. 在`hoshino/config`目录下塞个叫`bot_manager_web.py`的文件，里面写下面这些变量，让模块可以正常被使用。
 
 ```python
 import os
