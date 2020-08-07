@@ -16,12 +16,28 @@
 import os
 from .__bot__ import HOST, PORT
 
+# 显示ICP备案相关的内容，如果没有ICP备案信息要显示的话保持为空就可以了
+ICP_CONTENT = ''
+# 私聊机器人“bot设置”返回的网址基础域名，默认是从hoshino的配置中读取
+PUBLIC_ADDRESS = f"http://{HOST}:{PORT}"
+# 访问bot manager web的密码。公网服务没有身份验证是很危险的，密码建议自行修改！！！
+PASSWORD = '987654321'
+```
+
+PS: 如果有容器运行的需求的话，配置文件可以用下面这个：
+
+```python
+import os
+from .__bot__ import HOST, PORT
+
+# 显示ICP备案相关的内容，如果没有ICP备案信息要显示的话保持为空就可以了
 ICP_CONTENT = os.environ.get('ICP_CONTENT') if os.environ.get('ICP_CONTENT') else ''
+# 私聊机器人“bot设置”返回的网址基础域名，默认是从hoshino的配置中读取
 PUBLIC_ADDRESS = os.environ.get('PUBLIC_ADDRESS') if os.environ.get('PUBLIC_ADDRESS') else f"http://{HOST}:{PORT}"
+# 访问bot manager web的密码。公网服务没有身份验证是很危险的，密码建议自行修改！！！
 PASSWORD = os.environ.get('BOT_MANAGER_WEB_PASSWORD') if os.environ.get('BOT_MANAGER_WEB_PASSWORD') else '987654321'
 ```
 
-PS: 至于为啥要用os.environ，因为习惯性扔进容器里所以需要环境变量赋值┓( ´∀` )┏
 
 ## 使用
 
