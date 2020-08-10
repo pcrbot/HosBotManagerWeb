@@ -1,5 +1,11 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+import os
 import nonebot
-from hoshino.config.bot_manager_web import PUBLIC_ADDRESS
+from hoshino.config import HOST, PORT
+
+# 私聊机器人“bot设置”返回的网址基础域名，默认是从hoshino的配置中读取
+PUBLIC_ADDRESS = os.environ.get('PUBLIC_ADDRESS') if os.environ.get('PUBLIC_ADDRESS') else f"http://{HOST}:{PORT}"
 
 bot = nonebot.get_bot()
 

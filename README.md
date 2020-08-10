@@ -10,33 +10,19 @@
 
 3. 在`hoshino/config/__bot__.py`文件中添加模块引用。MODULES_ON 这个字典中添加一行`'bot_manager_web'`。
 
-4. 在`hoshino/config`目录下塞个叫`bot_manager_web.py`的文件，里面写下面这些变量，让模块可以正常被使用。
+4. 修改配置信息（密码请务必修改，避免造成信息泄露！）
 
-```python
-import os
-from .__bot__ import HOST, PORT
+BOT_MANAGER_WEB_PASSWORD
 
-# 显示ICP备案相关的内容，如果没有ICP备案信息要显示的话保持为空就可以了
-ICP_CONTENT = ''
-# 私聊机器人“bot设置”返回的网址基础域名，默认是从hoshino的配置中读取
-PUBLIC_ADDRESS = f"http://{HOST}:{PORT}"
-# 访问bot manager web的密码。公网服务没有身份验证是很危险的，密码建议自行修改！！！
-PASSWORD = '987654321'
-```
+- 环境变量。环境变量中`BOT_MANAGER_WEB_PASSWORD`值设置为想要的密码。
+- 如果不想用环境变量，则可以修改`hoshino/modules/bot_manager_web/view.py`中的`PASSWORD`后面值修改成你想要的密码。
 
-PS: 如果有容器运行的需求的话，配置文件可以用下面这个：
+PUBLIC_ADDRESS
 
-```python
-import os
-from .__bot__ import HOST, PORT
+这个一般不用管，直接引用的hoshino的配置。如果要修改的话
 
-# 显示ICP备案相关的内容，如果没有ICP备案信息要显示的话保持为空就可以了
-ICP_CONTENT = os.environ.get('ICP_CONTENT') if os.environ.get('ICP_CONTENT') else ''
-# 私聊机器人“bot设置”返回的网址基础域名，默认是从hoshino的配置中读取
-PUBLIC_ADDRESS = os.environ.get('PUBLIC_ADDRESS') if os.environ.get('PUBLIC_ADDRESS') else f"http://{HOST}:{PORT}"
-# 访问bot manager web的密码。公网服务没有身份验证是很危险的，密码建议自行修改！！！
-PASSWORD = os.environ.get('BOT_MANAGER_WEB_PASSWORD') if os.environ.get('BOT_MANAGER_WEB_PASSWORD') else '987654321'
-```
+- 环境变量。环境变量中`PUBLIC_ADDRESS`值设置为想要的密码。
+- 如果不想用环境变量，则可以修改`hoshino/modules/bot_manager_web/reply.py`中的`PUBLIC_ADDRESS`后面值修改成你想要的url。
 
 ## 使用
 
