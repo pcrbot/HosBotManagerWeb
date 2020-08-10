@@ -40,7 +40,7 @@ PASSWORD = os.environ.get('BOT_MANAGER_WEB_PASSWORD') if os.environ.get('BOT_MAN
 
 ## 使用
 
-访问`https://bcr.yourdomain.com/manage`
+访问`https://bcr.yourdomain.com:<your port>/manage`
 
 输入上面文件里设定的密码登录（至于为啥没有用户名，反正只有一个人会去登录的东西要什么用户名！）
 
@@ -51,6 +51,8 @@ PS: 注销按钮我也不知道为啥要存在，想了想也没啥意义就没�
 PPS: 还有部分垃圾文件懒得看了，体积也不算太过夸张懒得抽了，有人有空可以抽一抽。
 
 PPPS：友情提示！使用云服务器请确认对应端口在云服务器中是否开放！使用windows服务器请在服务器的防火墙中确认对应端口是否开放！
+
+PPPPS: 端口请查看你的hoshine的config/__bot__.py里的PORT参数设置的是多少。
 
 ## 图示
 
