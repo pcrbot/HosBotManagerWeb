@@ -4,7 +4,7 @@
 
 ## 安装
 
-1. 前略装好hoshinobot。
+1. 前略装好hoshinobot。步骤参考[hoshino文档](https://github.com/Ice-Cirno/HoshinoBot)。
 
 2. 整个`bot_manager_web`目录塞进`hoshino/modules`目录下面。
 
