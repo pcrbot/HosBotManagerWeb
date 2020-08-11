@@ -1,7 +1,6 @@
 import os
 import json
 import nonebot
-import hoshino
 from datetime import timedelta
 from hoshino import Service
 from quart import request, session, redirect, Blueprint
@@ -45,7 +44,7 @@ async def login():
     else:
         login_data = await request.form
         input_psd = login_data.get('password')
-        if input_psd == hoshino.config.bot_manager_web.PASSWORD:
+        if input_psd == PASSWORD:
             user_ip = request.remote_addr
             session['user_ip'] = user_ip
             session.permanent = True
