@@ -5,7 +5,8 @@
 
     <div class="form-group col-md-4 ">
         <div class="input-group">
-            <span class="form-control">{{ group["group_id"] }}{{ group["group_name"] }}</span>
+            <span class="input-group-append"><span class="input-group-text"><i> {{ group["group_id"] }}</i></span></span>
+            <span class="form-control">{{ group["group_name"] }}</span>
             <button id="{{group['group_id']}}" onclick="switcher('{{ group['group_id'] }}')"></button>
         </div>
     </div>
@@ -74,7 +75,7 @@
     }
 
     function save() {
-        var url = '/manage/set';
+        var url = '{{ url_prefix }}/set';
         var request = new XMLHttpRequest();
         request.onload = function () {
             if (request.status === 200) {

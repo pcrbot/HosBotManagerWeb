@@ -35,14 +35,14 @@
                 <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button"
                    aria-haspopup="true" aria-expanded="false">
                     <img class="user-avatar rounded-circle mr-2"
-                         src="/statics/images/avatars/default.png"
+                         src="{{ url_prefix }}{{ static_url_path }}/images/avatars/default.png"
                          alt="User Avatar">
                     <span id="username_span" hidden class="d-none d-md-inline-block">{{ user.username }}</span>
                     <span id="name_span">{{ user.name }}</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-small">
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" id="button_logout" href="/manage/logout/">
+                    <a class="dropdown-item text-danger" id="button_logout" href="{{ url_prefix }}/logout/">
                         <i class="material-icons text-danger">&#xE879;</i> 注销 </a>
                 </div>
             </li>

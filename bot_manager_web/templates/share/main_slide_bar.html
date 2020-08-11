@@ -4,7 +4,7 @@
             <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
                 <div class="d-table m-auto">
                     <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;"
-                         src="/statics/images/logo.svg" alt="Shards Dashboard">
+                         src="{{ url_prefix }}{{ static_url_path }}/images/logo.svg" alt="Shards Dashboard">
                     <span class="d-none d-md-inline ml-1">bot</span>
                 </div>
             </a>
@@ -25,21 +25,21 @@
     <div class="nav-wrapper">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link" href="/manage">
+                <a class="nav-link" href="{{ url_prefix }}">
                     <i class="material-icons">account_balance</i>
                     <span>首页</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link"
-                   href="/manage/service">
+                   href="{{ url_prefix }}/service">
                     <i class="material-icons">fiber_manual_record</i>
                     <span>按服务管理</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link"
-                   href="/manage/group">
+                   href="{{ url_prefix }}/group">
                     <i class="material-icons">view_list</i>
                     <span>按群管理</span>
                 </a>

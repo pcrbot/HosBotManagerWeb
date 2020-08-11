@@ -37,7 +37,7 @@
     }
 
     function save() {
-        const url = '/manage/set';
+        const url = '{{ url_prefix }}/set';
         const request = new XMLHttpRequest();
         request.onload = function () {
             if (request.status === 200) {

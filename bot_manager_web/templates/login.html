@@ -1,7 +1,7 @@
 {% extends "share/bare_base.html" %}
 {% block imports %}
-    <script src="statics/scripts/form.js"></script>
-    <link rel="stylesheet" href="statics/styles/form.css">
+    <script src="{{ url_prefix }}{{ static_url_path }}/scripts/form.js"></script>
+    <link rel="stylesheet" href="{{ url_prefix }}{{ static_url_path }}/styles/form.css">
 {% endblock %}
 {% block main %}
 <div class="main-content-container container-fluid px-4">
