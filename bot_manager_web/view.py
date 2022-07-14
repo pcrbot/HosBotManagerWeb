@@ -5,6 +5,7 @@ from datetime import timedelta
 from hoshino import Service
 from quart import request, session, redirect, Blueprint
 from .http_handler import render_template, get_random_str
+import hoshino
 
 # 访问bot manager web的密码。公网服务没有身份验证是很危险的，密码建议自行修改！！！
 PASSWORD = os.environ.get('BOT_MANAGER_WEB_PASSWORD') if os.environ.get('BOT_MANAGER_WEB_PASSWORD') else '987654321'
@@ -17,7 +18,10 @@ if not app.config.get('SECRET_KEY'):
 
 
 async def get_groups():
-    return await bot.get_group_list()
+    for sid in hoshino.get_self_ids():
+        gl = await bot.get_group_list(self_id=sid)
+
+    return gl
 
 
 @switcher.before_request
