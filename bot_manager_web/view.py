@@ -18,8 +18,11 @@ if not app.config.get('SECRET_KEY'):
 
 
 async def get_groups():
+    gl = []
     for sid in hoshino.get_self_ids():
-        gl = await bot.get_group_list(self_id=sid)
+        gl_ = await bot.get_group_list(self_id=sid)
+        for g in gl_:
+            gl.append(g)
 
     return gl
 
