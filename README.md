@@ -1,6 +1,6 @@
 # 简介
 
-基于一个叫`hoshinoV2服务开关网页版.zip`的东西改出来的玩意儿，web管理hoshino的service开关的东西。
+基于一个叫[hoshinoV2服务开关网页版.zip](https://github.com/pcrbot/plugins-for-Hoshino/tree/master/shebot/webServiceManager)(作者 @shewinder ) 改出来的玩意儿，web管理hoshino的service开关的东西。 
 
 ## 安装
 
