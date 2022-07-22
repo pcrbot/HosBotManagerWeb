@@ -22,7 +22,8 @@ async def get_groups():
     for sid in hoshino.get_self_ids():
         gl_ = await bot.get_group_list(self_id=sid)
         for g in gl_:
-            gl.append(g)
+            if g not in gl:
+                gl.append(g)
 
     return gl
 
